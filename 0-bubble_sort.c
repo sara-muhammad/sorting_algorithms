@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "sort.h"
 
+void swap(int *array, int prev, int next, int size);
+
 /**
  * bubble_sort - implements bubble sort
  * @array: the array
