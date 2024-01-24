@@ -9,11 +9,11 @@ void swap(listint_t **head, listint_t *node1, listint_t *node2);
  * on doubly linked list
  * @list: list to be sorted
  * Return: nothing
-*/
+ */
 
 void insertion_sort_list(listint_t **list)
 {
-    	listint_t *i, *j;
+	listint_t *i, *j;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
@@ -21,7 +21,7 @@ void insertion_sort_list(listint_t **list)
 	for (i = (*list)->next; i && i->prev; i = i->next)
 	{
 		for (; i && i->prev && i->n < i->prev->n;
-		     i = i->prev)
+				i = i->prev)
 		{
 			j = i->prev;
 			swap(list, j, i);
@@ -37,7 +37,7 @@ void insertion_sort_list(listint_t **list)
  * @node1: the first node
  * @node2: the second node
  * Return:nothing
-*/
+ */
 void swap(listint_t **head, listint_t *node1, listint_t *node2)
 {
 	listint_t *tmp_p, *tmp_n;
